@@ -1,8 +1,13 @@
 <div class="my-8 flex flex-col items-center gap-10">
-    <form class="justify-center print:hidden" action="">
+    <form class="justify-center  print:hidden" action="">
         <textarea wire:model.live="message" name="" cols="30" rows="10"
                   class="bg-white/10
         text-white py-2 px-3 rounded"></textarea>
+
+        <div class="mt-2 flex justify-end">
+            <button class="bg-blue-500 text-white px-4 py-2
+            rounded-md" @click="window.print()">Print</button>
+        </div>
     </form>
 
     <div class="text-center flex flex-row flex-wrap gap-x-[35px] w-full
@@ -16,10 +21,12 @@
                         }}
                         </span>
 
+                        @if ($message)
                         <div style="background-color: darkgrey" class="bg-gray-200
                         border-gray-950 w-12
                         h-12">
                         </div>
+                        @endif
                     </div>
 
                 @endforeach
@@ -27,5 +34,7 @@
         @endforeach
     </div>
 
+    @if($message)
     <x-legend :letters="$this->letters" />
+    @endif
 </div>
