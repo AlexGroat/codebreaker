@@ -1,5 +1,6 @@
 @props(['letters'])
 
+<h1 class="uppercase text-2xl">Legend</h1>
 <div class="flex flex-wrap gap-x-2 items mb-4">
     @foreach($letters as $letter => $symbol)
         <div class="flex flex-col items-center p-1 border border-white/30">
