@@ -1,6 +1,6 @@
 <x-layout>
-    <section class="px-6">
-    <div class="container mx-auto">
+    <section class="mx-auto container px-6">
+    <div>
         <header class="flex justify-center">
             <img src="/logo.svg" alt="Codebreaker" aria-label="Codebreaker" class="print:invert w-52 print:w-36">
         </header>
