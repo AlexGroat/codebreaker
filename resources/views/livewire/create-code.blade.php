@@ -4,10 +4,12 @@
                   class="bg-white/10
         text-white py-2 px-3 rounded"></textarea>
 
+        @if($message)
         <div class="mt-2 flex justify-end">
             <button class="bg-blue-500 text-white px-4 py-2
             rounded-md" @click="window.print()">Print</button>
         </div>
+        @endif
     </form>
 
     <div class="text-center flex flex-row flex-wrap gap-x-[35px] w-full
